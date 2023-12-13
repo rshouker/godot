@@ -188,7 +188,7 @@
 		</member>
 		<member name="movie_quit_on_finish" type="bool" setter="set_movie_quit_on_finish_enabled" getter="is_movie_quit_on_finish_enabled" default="false">
 			If [code]true[/code] and the engine is running in Movie Maker mode (see [MovieWriter]), exits the engine with [method SceneTree.quit] as soon as an animation is done playing in this [AnimationPlayer]. A message is printed when the engine quits for this reason.
-			[b]Note:[/b] This obeys the same logic as the [signal AnimationMixer.animation_finished] signal, so it will not quit the engine if the animation is set to be looping.
+			[b]Note:[/b] This obeys the same logic as the [signal AnimationMixer.animation_finished] signal, so it will not quit the engine if the animation is set to be looping. Also note that AnimationPlayer inherits from AnimationMixer, so the [signal AnimationMixer.animation_finished] is emitted from it too.
 		</member>
 		<member name="playback_default_blend_time" type="float" setter="set_default_blend_time" getter="get_default_blend_time" default="0.0">
 			The default time in which to blend animations. Ranges from 0 to 4096 with 0.01 precision.
